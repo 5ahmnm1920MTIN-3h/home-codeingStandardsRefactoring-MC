@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             if (isGrounded == true)
             {
-                jump();
+                Jump();
             }
 
 
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     // Called when isGrounded is true, starts jumpevent
 
-    void jump()
+    void Jump()
     {
         isGrounded = false;
 
