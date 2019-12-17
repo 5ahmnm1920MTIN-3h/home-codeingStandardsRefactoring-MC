@@ -39,3 +39,17 @@ Was versteht man unter Code Smell?
 
 
 Recherche von 10 Code Smells die Eure Projekt betreffen können, inkl. Beschreibung und Beispiel.
+- Kommentare
+Keine unnötigen Kommentare
+
+- Aussagekräftige Namen
+Variablen- und Klassennamen sollten ihren Zweck beschreiben
+
+- Keine Coderedundanz
+Ein Code sollte nur einmal vorkommen.
+
+- Methoden kurz halten
+Methoden am besten so kurz wie möglich halten.
+
+- Nichts unnötig Verschachteln
+Unnötige Verschachtelungen machen den Code unübersichtlich
