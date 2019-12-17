@@ -4,6 +4,7 @@ public class Obstacle : MonoBehaviour
 {
     Rigidbody2D rigidbodyObstacle;
     [SerializeField] private float MoveSpeed;
+    const float obstacleDestroyBoundary = 15f;
 
     private void Awake()
     {
@@ -14,16 +15,16 @@ public class Obstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
 {
-    //if obstacle's position x is < -15f it will be destroyed
-    if(transform.position.x < -15f)
-    {
+        //if obstacle's position x is < -15f it will be destroyed
+        if (transform.position.x < -obstacleDestroyBoundary)
+        {
         Destroy(gameObject);
 }
         // Update is called once per frame
         void Update()
         {
             //if obstacle's position x is < -15f it will be destroyed
-            if (transform.position.x < -15f)
+            if (transform.position.x > obstacleDestroyBoundary)
             {
                 Destroy(gameObject);
             }
