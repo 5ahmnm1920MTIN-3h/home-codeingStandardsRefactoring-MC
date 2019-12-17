@@ -42,8 +42,8 @@ public class ObstacleSpawner : MonoBehaviour
         while (!isGameOver)
         {
             SpawnObstacle();
-            
-            waitTime = Random.Range(minSpawnTime,maxSpawnTime);
+
+                waitTime = Random.Range(minSpawnTime, maxSpawnTime);
 
             yield return new WaitForSeconds(waitTime);
         }
@@ -51,8 +51,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnObstacle()
     {
-        int randomPosition = Random.Range(0,obstacles.Length);
-
-        Instantiate(obstacles[randomPosition],transform.position,Quaternion.identity);
+        int randomPosition = Random.Range(0, obstacles.Length);
+        Instantiate(obstacles[randomPosition], transform.position, Quaternion.identity);
     }
 }

@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rigidbodySanta;
-    Animator animator, anim2, anim3, anim4, anim5;
+    Animator animator;
+    bool isGrounded;
+    bool isGameOver = false;
     [SerializeField] float jumpForce;
     
 
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && !isGameOver && !isGameOver && !isGameOver)
+        if (Input.GetMouseButton(0) && !isGameOver)
         {
             if (isGrounded == true)
             {
@@ -57,10 +57,12 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)   {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         if(collision.gameObject.tag == "Ground")
         {
-            isGrounded = true;}
+            isGrounded = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
