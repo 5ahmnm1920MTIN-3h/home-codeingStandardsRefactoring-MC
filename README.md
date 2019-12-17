@@ -1,65 +1,41 @@
-# Santa Run
+Was ist Refactoring Definition in eigenen Worten?
 
-### Project description: 
-This is a simple 2D side-scroll game. The Santa runs from left to right and has to avoid some obstacles by jumping over them.
-The game ends when the Santa hits an obstacle.  The goal is to avoid as many obstacles as possible.
-
-### Development platform: 
-Windows 10, Unity version 2019.1.14f1, Visual Studio Community 2017, Scripting Runtime Version: .NET 4.0
-
-### Target platform: 
-WebGl and Standalone, RefRes: 1920 * 1080
+- Refactoring beschreibt den strukturierten Vorgang des Optimierens und Ausbessern von Code, um diesen leichter verständlich zu machen, wobei jegliche Funktionen des bestehenden Programms beibehalten werden.
 
 
-### Visuals: 
-<div>
-<img src = "./Screenshots/sketch-SantaRun.JPG" width = "500">
-</div>
 
-[![SANTA RUN](https://i9.ytimg.com/vi/2C74XxBkFfI/mq1.jpg?sqp=CNWnze8F&rs=AOn4CLBrmO-tJ3gQ2BNeMxvrmQcsIhhcgQ)](https://www.youtube.com/embed/2C74XxBkFfI "Santa RUN")
+Welche Vorteile/Nachteile birgt Refactoring?
 
-https://www.youtube.com/embed/2C74XxBkFfI
+Vorteile: 
+- Bessere Lesbarkeit und Verständlichkeit für Außenstehende
+- Redundanz wird vermieden
+- Bessere Testbarkeit
+- Code leichter erweiterbar
+- Übersichtlicher
 
-### Necessary setup/execution steps: 
-For playing the game go to: 
-* WebGL: https://hs-teaching.github.io/WegGL-SantaRun/
-* Standalone (.exe): Clone project and publish as Standalone
-
-For development: Clone this project. 
-
-### Third party material: 
-* This game is based on the game Santa Run developed by Raja Biswas in the Udemy-course Unity 2018 Game Developmen by Example 
-[Unity 2018 Game Development by Example](https://www.udemy.com/course/unity-2d-game-development-by-example/).
-* Sprites are used from https://www.gameart2d.com/santa-claus-free-sprites.html
+Nachteile: 
+- Neue unerwartete Fehler können auftreten
+- Testaufwand
+- Abstimmungsaufwand zwischen Programmierern
 
 
-### Project state: 
-Program is working correctly, no errors, refactoring is needed.
-Refactoring needed: 
-* del not used namespaces
-* del unused variables
-* del needless debugs
-* del needless comments
-* del unused methods
-* rename variables (coding standards)
-* rename methods (coding standards)
-* fix poor conditional clauses
-* fix poor formating
-* replace magic string
-* replace magic number
-
-### Limitations: 
-Only one level is implemented. 
-
-### Lessons Learned: 
-* Create 2D Scenes
-* Use Quads for moving Backgrounds (Textures instead of Sprites)
-* Use Particle System for snowing effect.
-* Use Scene Management for switching between Scenes
-* Create and control Animations (Animation, Animator and Scripts)
-* Use the singelton pattern
-* Spawn objects
-* Use UI elements and manipulate UI elements with scrips
+Was sind die Refactoring-Schritte?
+- Testcase definieren
+- Testen ob Programm zu diesem Stand funktioniert bzw. was alles funktioniert
+- Einen „Code Smell“ ausbessern 
+- Testen ob das Programm noch alle zuvor bekannten Funktionen erfüllt
+- Commit
+- Wiederhole Schritt 3, 4 ,5 bis alle Smells ausgebessert sind
+- Projekt pushen
 
 
-Copyright by smeerws
+Prinzipien von guten Code?
+- DRY - Don’t Repeat Yourself Unnötige wiederholte/redundante Sachen können reduziert werden. KISS - Keep it Simple, Stupid Außenstehende sollten den Code auch verstehen können. YAGNI - You Ain’t Gonna Need Code der nicht benutzt wird kann gelöscht werden. Principle of least Astonishment Der User soll nie überrascht werden und jegliche Benennungen sollen klar erkenntlich angegeben sein was diese erfüllen. SoC - Separation of Concerns Der Code soll zusammengehörige Funktionen in diverse Abschnitte gliedern.
+
+
+Was versteht man unter Code Smell?
+- Der Begriff beschreibt funktionalen Code, welcher jedoch keine gute Strukturierung aufweist und oft unnötig komplex ist.
+
+
+
+Recherche von 10 Code Smells die Eure Projekt betreffen können, inkl. Beschreibung und Beispiel.
