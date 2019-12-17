@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     const string mainSceneKeyword = "MainScene";
     const string menuSceneKeyword = "MenuScene";
 
+    // Called once on Gamestart, sets instance variable
+
     private void Awake()
     {
         if(instance == null)
@@ -22,7 +24,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    // Called before the first frame update,  shows current state in console
+
     void Start()
     {
         Debug.Log("in Start");   
@@ -34,12 +37,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("in Update");
     }
 
+    // Called on GameOver, calls StopScrolling, stops obstacle spawning and activates gameover panel
+
     public void GameOver()
     {
         ObstacleSpawner.instance.isGameOver = true;
         StopScrolling();
         gameOverPanel.SetActive(true);
     }
+
+    // Called if GameOver is true, stops background scrolling
 
     void StopScrolling()
     {
@@ -52,15 +59,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Called on Restart, sets MainScene
+
     public void Restart()
     {
         SceneManager.LoadScene(mainSceneKeyword);
     }
 
+    // Called on Menu, sets MenuScene
+
     public void Menu()
     {
         SceneManager.LoadScene(menuSceneKeyword);
     }
+
+    // Counts and shows score
 
     public void IncrementScore()
     {
